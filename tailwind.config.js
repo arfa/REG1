@@ -1,7 +1,7 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",
+    "./src/**/*.{js,jsx,ts,tsx}",'./node_modules/tw-elements/dist/js/**/*.js'
   ],
   theme: {
     screens: {
@@ -9,6 +9,9 @@ module.exports = {
       md: '768px',
       lg: '976px',
       xl: '1440px',
+    },
+    dropboxShadow: {
+      '3xl': '0 35px 60px -15px rgba(0, 0, 0, 0.3)',
     },
     extend: {
       backgroundImage: {
@@ -25,9 +28,12 @@ module.exports = {
         veryLightGray: 'hsl(0, 0%, 98%)',
         greenlight:'#4fa166',
         green01:'#152e1c',
-        red01:'#614042',
+        red01:'#a6030b',
+        red02:'#666'
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('tw-elements/dist/plugin')
+  ],
 }

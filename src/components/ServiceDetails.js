@@ -1,39 +1,85 @@
-import React from 'react'
+import React from 'react';
+import Logo from '../images/acceuil.jpg'
+import Logo1 from '../images/demolition.jpeg'
+import Logo2 from '../images/vente-de-produit.jpg'
 
 const ServiceDetails = () => {
   return (
-  <> 
-  <div className='bg-gradient-to-r from-green01 via-green01 to-neutral-900 h-64'>
+  <div className='flex flex-col ' name="SERVICES"> 
+  <div className='bg-zinc-900 h-72 '>
   
-  <div class="max-w-sm w-full lg:max-w-full lg:flex">
-  <div class=" bg-acceuil h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"  title="Woman holding a mug">
-  </div>
-  <div class="border-r border-b border-l border-gray-400 lg:border-l-0 lg:border-t lg:border-gray-400 bg-transparent rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+  <div class=" w-full  grid grid-cols-2 gap-4 justify-items-center border-t-4 border-zinc-900 ">
+  {/* <div class=" bg-acceuil h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"  title="Woman holding a mug">
+  </div> */}
+  <div class="    bg-transparent  p-4 flex flex-col  leading-normal">
     <div class="mb-8">
-      <p class="text-sm text-gray-600 flex items-center">
-        <svg class="fill-current text-gray-500 w-3 h-3 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-          <path d="M4 8V6a6 6 0 1 1 12 0v2h1a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-8c0-1.1.9-2 2-2h1zm5 6.73V17h2v-2.27a2 2 0 1 0-2 0zM7 6v2h6V6a3 3 0 0 0-6 0z" />
-        </svg>
-        Members only
-      </p>
-      <div class="text-gray-900 font-bold text-xl mb-2">Can coffee make you a better developer?</div>
-      <p class="text-gray-700 text-base">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.</p>
+      
+      <div class="text-white font-bold text-2xl mb-2">Démolition</div>
+      <p class="text-white text-xl">Tout type de démolition telque usine, immeuble, hôtel et autres du secteur des BTP
+</p>
     </div>
     <div class="flex items-center">
       {/* <img class="w-10 h-10 rounded-full mr-4" src="/img/jonathan.jpg" alt="Avatar of Jonathan Reinink"/> */}
-      <div class="text-sm">
-        <p class="text-gray-900 leading-none">Jonathan Reinink</p>
-        <p class="text-gray-600">Aug 18</p>
-      </div>
+     
     </div>
   </div>
+ <div className='shadow-zinc-900' >
+ <img className='h-64 w-full opacity-100 ' src={Logo1} alt='aaa' />
+ </div>
+ 
+
+  
 </div>
       
   </div>
-    <div className='bg-gradient-to-r from-neutral-900 via-green01 to-green01 h-64'></div>
-    <div className='bg-gradient-to-r from-green01 via-green01 to-neutral-900 h-64'></div>
+    <div className='bg-zinc-900  h-72 items-center'>
+    <div class=" w-full  grid grid-cols-2 gap-4 justify-items-center ">
+  {/* <div class=" bg-acceuil h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"  title="Woman holding a mug">
+  </div> */}
+    <div className='' >
+ <img className='h-64 w-full opacity-100 ' src={Logo} alt='aaa' />
+ </div>
+  <div class="  border-y-4 border-green01  bg-transparent  p-4 flex flex-col  leading-normal">
+    <div class="mt-8">
+      
+      <div class="text-white font-bold text-2xl mb-2">
+</div>
+      <p class="text-white text-xl font-bold">Décharge agrée pour tous types de déchets de construction </p>
+    </div>
+    <div class="flex items-center">
+      {/* <img class="w-10 h-10 rounded-full mr-4" src="/img/jonathan.jpg" alt="Avatar of Jonathan Reinink"/> */}
+      
+    </div>
+  </div>
+ 
+ 
+
+  
+</div>
+    </div>
+    <div className='bg-zinc-900  border-b-4 border-green01  h-72'>
+
+    <div class=" w-full  grid grid-cols-2 gap-4 justify-items-center items-center ">
+  {/* <div class=" bg-acceuil h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"  title="Woman holding a mug">
+  </div> */}
+  <div class="    bg-transparent  p-4 flex flex-col  leading-normal">
+    <div class="mt-8">
+      
+      <div class="text-white font-bold text-2xl mb-2"></div>
+      <p class="text-white text-xl">Vente de produits de carrière dérivée de déchets de construction au sein de l’économie circulaire </p>
+    </div>
     
-  </>
+  </div>
+ <div className='flex' >
+ <img className='h-64 w-full opacity-100    ' src={Logo2} alt='aaa' />
+ </div>
+ 
+
+  
+</div>
+    </div>
+    
+  </div>
     
   )
 }

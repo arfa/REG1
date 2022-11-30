@@ -1,62 +1,64 @@
 import React, { useState } from "react";
 import { Transition } from "@headlessui/react";
-import Logo from '../images/logo.jpg'
+import Logo from '../images/logo-vert.svg';
+import {Link} from 'react-scroll'
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <div>
     
-      <nav className="   md:flex flex-row  items-center  bg-white">
-      
-              
-        <div className="max-w-7xl mx-auto  px-4 sm:px-6  lg:px-8">
-       
-          <div className="flex items-center  justify-between h-16    ">
-         
-            <div className="flex items-center  ">
-            <div className=" flex  items-center  ">
+      <nav className="   md:flex  grid grid-cols-2  md:flex-row  items-center justify-between   bg-white">
+
+      <div className=" flex  ml-4  ">
                 <img
-                  className="h-16 w-16 "
+                  className="w-20 h-16  "
                   src={Logo}
                   alt="Workflow"
                 />
               </div>
+              
+        <div className="max-w-7xl flex justify-end md:mx-auto  px-4 sm:px-6  lg:px-8">
+       
+          <div className="flex items-center   justify-between h-16    ">
+         
+            <div className="flex items-center  ">
+           
               <div className="hidden md:block">
-                <div className="ml-10 flex items-baseline space-x-4">
+                <div className="ml-10 flex items-baseline space-x-6">
                   <a
                     href="#"
-                    className=" text-gray-300 hover:bg-green01 hover:text-greenlight px-3 py-2 rounded-md text-sm font-medium"
+                    className=" text-gray-300 hover:bg-greenlight font-bold hover:text-white px-3 py-2 rounded-md text-base font-medium"
                   >
-                    Dashboard
+                    <Link activeClass="active" className="test1" to="APROPOS" spy={true} smooth={true} duration={1000} >A PROPOS</Link>
+                  </a>
+                  
+                  <a
+                    href="#"
+                    className="text-gray-300 hover:bg-greenlight font-bold hover:text-white px-3 py-2 rounded-md text-base font-medium"
+                  >
+                    <Link activeClass="active" className="test1" to="test1" spy={true} smooth={true} duration={1000} >SERVICES</Link>
                   </a>
 
                   <a
                     href="#"
-                    className="text-gray-300 hover:bg-greenlight hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="text-gray-300 hover:bg-greenlight font-bold hover:text-white px-3 py-2 rounded-md text-base font-medium"
                   >
-                    Team
+                    <Link activeClass="active" className="test1" to="PROJETS" spy={true} smooth={true} duration={1000} >PROJETS</Link>
                   </a>
+
+                  {/* <a
+                    href="#"
+                    className="text-gray-300 hover:bg-greenlight font-bold hover:text-white px-3 py-2 rounded-md text-base font-medium"
+                  >
+                    <Link activeClass="active" className="test1" to="REFERENCE" spy={true} smooth={true} duration={1000} >REFERENCE</Link>
+                  </a> */}
 
                   <a
                     href="#"
-                    className="text-gray-300 hover:bg-greenlight hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="text-gray-300 hover:bg-greenlight font-bold hover:text-white px-3 py-2 rounded-md text-base font-medium"
                   >
-                    Projects
-                  </a>
-
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-greenlight hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Calendar
-                  </a>
-
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-greenlight hover:text-white px-3 py-2 rounded-md text-sm font-medium"
-                  >
-                    Reports
+                    <Link activeClass="active" className="test1" to="CONTACT" spy={true} smooth={true} duration={1000} >CONTACT</Link>
                   </a>
                 </div>
               </div>
@@ -118,41 +120,41 @@ function Navbar() {
           leaveTo="opacity-0 scale-95"
         >
           {(ref) => (
-            <div className="md:hidden " id="mobile-menu">
-              <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+            <div className="md:hidden col-start-1 col-end-3   " id="mobile-menu">
+              <div ref={ref} className="px-2 pt-2 pb-3  space-y-1 sm:px-3">
                 <a
                   href="#"
                   className=" text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Dashboard
+                   <Link activeClass="active" className="test1" to="APROPOS" spy={true} smooth={true} duration={1000} >ACCEUIL</Link>
                 </a>
 
                 <a
                   href="#"
                   className="text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Team
+                  <Link activeClass="active" className="test1" to="SERVICES" spy={true} smooth={true} duration={1000} >SERVICES</Link>
                 </a>
 
                 <a
                   href="#"
                   className="text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Projects
+                  <Link activeClass="active" className="test1" to="APROPOS" spy={true} smooth={true} duration={1000} >PROJETS</Link>
                 </a>
+
+                {/* <a
+                  href="#"
+                  className="text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                >
+                  REFERENCE
+                </a> */}
 
                 <a
                   href="#"
                   className="text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-medium"
                 >
-                  Calendar
-                </a>
-
-                <a
-                  href="#"
-                  className="text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                >
-                  Reports
+                 <Link activeClass="active" className="test1" to="APROPOS" spy={true} smooth={true} duration={1000} >CONTACT</Link>
                 </a>
               </div>
             </div>
