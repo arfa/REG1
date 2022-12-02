@@ -4,6 +4,9 @@ module.exports = {
     "./src/**/*.{js,jsx,ts,tsx}",'./node_modules/tw-elements/dist/js/**/*.js'
   ],
   theme: {
+    fontSize:{
+      xsm: '1.3rem'
+    },
     screens: {
       sm: '480px',
       md: '768px',

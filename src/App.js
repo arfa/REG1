@@ -18,9 +18,15 @@ function App() {
    
     
        <Acceuil/>
+       <div className="md:hidden">
        <Services/>
+       </div>
        <ServiceDetails/>
        <Carousel/>
+       <div className="hidden md:block">
+       <Services/>
+       </div>
+       
        <Contact/>
        <Footer/>
    
