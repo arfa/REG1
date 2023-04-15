@@ -1,7 +1,9 @@
 import React, { useState } from "react";
+import {Link  as Link1} from 'react-router-dom';
 import { Transition } from "@headlessui/react";
 import Logo from '../images/logo-vert.svg';
-import {Link} from 'react-scroll'
+import {Link} from 'react-scroll';
+import Opportunity from './Opportunity';
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -28,39 +30,46 @@ function Navbar() {
                 <div className="ml-10 flex items-baseline space-x-6">
                   <a
                     href="#"
-                    className=" text-gray-300 hover:bg-greenlight font-bold hover:text-white px-3 py-2 rounded-md text-base font-medium"
+                    className=" text-gray-300 hover:bg-greenlight font-bold hover:text-white px-3 py-2 rounded-md text-base font-semibold"
                   >
                     <Link activeClass="active" className="test1" to="APROPOS" spy={true} smooth={true} duration={1000} >A PROPOS</Link>
                   </a>
                   
                   <a
                     href="#"
-                    className="text-gray-300 hover:bg-greenlight font-bold hover:text-white px-3 py-2 rounded-md text-base font-medium"
+                    className="text-gray-300 hover:bg-greenlight font-bold hover:text-white px-3 py-2 rounded-md text-base font-semibold"
                   >
-                    <Link activeClass="active" className="test1" to="test1" spy={true} smooth={true} duration={1000} >SERVICES</Link>
+                    <Link activeClass="active" className="test1" to="SERVICES" spy={true} smooth={true} duration={1000} >SERVICES</Link>
                   </a>
 
                   <a
                     href="#"
-                    className="text-gray-300 hover:bg-greenlight font-bold hover:text-white px-3 py-2 rounded-md text-base font-medium"
+                    className="text-gray-300 hover:bg-greenlight font-bold hover:text-white px-3 py-2 rounded-md text-base font-semibold"
                   >
                     <Link activeClass="active" className="test1" to="PROJETS" spy={true} smooth={true} duration={1000} >PROJETS</Link>
                   </a>
 
                   {/* <a
                     href="#"
-                    className="text-gray-300 hover:bg-greenlight font-bold hover:text-white px-3 py-2 rounded-md text-base font-medium"
+                    className="text-gray-300 hover:bg-greenlight font-bold hover:text-white px-3 py-2 rounded-md text-base font-semibold"
                   >
                     <Link activeClass="active" className="test1" to="REFERENCE" spy={true} smooth={true} duration={1000} >REFERENCE</Link>
                   </a> */}
 
                   <a
                     href="#"
-                    className="text-gray-300 hover:bg-greenlight font-bold hover:text-white px-3 py-2 rounded-md text-base font-medium"
+                    className="text-gray-300 hover:bg-greenlight font-bold hover:text-white px-3 py-2 rounded-md text-base font-semibold"
                   >
                     <Link activeClass="active" className="test1" to="CONTACT" spy={true} smooth={true} duration={1000} >CONTACT</Link>
                   </a>
+                  <a
+                    href="#"
+                    className="text-greenlight hover:bg-greenlight font-bold hover:text-white px-3 py-2 rounded-sm text-base font-semibold border-2 uppercase border-greenlight "
+                  >
+                    <Link1 activeClass="active"  to="/opportunity"  >opportunités</Link1>
+                  </a>
                 </div>
+                
               </div>
             </div>
             <div className=" flex justify-end  md:hidden">
@@ -118,43 +127,44 @@ function Navbar() {
           leave="transition ease-in duration-200 transform"
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
+          className="col-span-2"
         >
           {(ref) => (
-            <div className="md:hidden col-start-1 col-end-3   " id="mobile-menu">
-              <div ref={ref} className="px-2 pt-2 pb-3  space-y-1 sm:px-3">
+            <div className="md:hidden    " id="mobile-menu">
+              <div ref={ref} className="px-2 pt-2 pb-3  space-y-1 sm:px-3 ">
                 <a
                   href="#"
-                  className=" text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  className=" text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-semibold justify-self-center"
                 >
                    <Link activeClass="active" className="test1" to="APROPOS" spy={true} smooth={true} duration={1000} >ACCEUIL</Link>
                 </a>
 
                 <a
                   href="#"
-                  className="text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  className="text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-semibold"
                 >
                   <Link activeClass="active" className="test1" to="SERVICES" spy={true} smooth={true} duration={1000} >SERVICES</Link>
                 </a>
 
                 <a
                   href="#"
-                  className="text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  className="text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-semibold"
                 >
-                  <Link activeClass="active" className="test1" to="APROPOS" spy={true} smooth={true} duration={1000} >PROJETS</Link>
+                  <Link activeClass="active" className="test1" to="PROJETS" spy={true} smooth={true} duration={1000} >PROJETS</Link>
                 </a>
 
                 {/* <a
                   href="#"
-                  className="text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  className="text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-semibold"
                 >
                   REFERENCE
                 </a> */}
 
                 <a
                   href="#"
-                  className="text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  className="text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-semibold"
                 >
-                 <Link activeClass="active" className="test1" to="APROPOS" spy={true} smooth={true} duration={1000} >CONTACT</Link>
+                 <Link activeClass="active" className="test1" to="CONTACT" spy={true} smooth={true} duration={1000} >CONTACT</Link>
                 </a>
               </div>
             </div>

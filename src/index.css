@@ -15,4 +15,11 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+[data-aos="new-animation"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+[data-aos="new-animation"].aos-animate {
+  opacity: 1;
+}
 

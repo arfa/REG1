@@ -1,6 +1,21 @@
-import React from 'react'
+import React  from 'react';
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
+  
+
+  const sendEmail = (e) => {
+     e.preventDefault();
+
+    emailjs.sendForm('service_i8qf2kg', 'template_t9jn69j', e.target, 'EtmZBQhZgDgjQ6VMw')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+      e.target.reset();
+    };
+
   return (
     <>
     {/* <section class="bg-white dark:bg-gray-900">
@@ -34,12 +49,13 @@ const Contact = () => {
         <p class="text-gray-500 mb-6">
             REG COMPANY
         </p>
-        <p class="text-gray-500 mb-2">ADRESSE</p>
-        <p class="text-gray-500 mb-2">+ 01 234 567 89</p>
-        <p class="text-gray-500 mb-2">info@gmail.com</p>
+        <p class="text-gray-400 text-xl  mb-2"><span><i class="fa-solid fa-location-dot fa-lg opacity-50"></i></span>  : Ezzahra plage lotissement Afh a
+Ben arous ezzahra</p>
+        <p class="text-gray-400 text-xl mb-2"><span><i class="fa-solid fa-phone fa-lg opacity-50"></i></span>  : +216 55 123 657</p>
+        <p class="text-gray-400 text-xl mb-2"><span><i class="fa-solid fa-envelope fa-lg opacity-50"></i></span>  : contact@reg.net.co </p>
       </div>
       <div class="grow-0 shrink-0 basis-auto mb-12 md:mb-0 w-full md:w-6/12 px-3 lg:px-6">
-        <form>
+        <form  onSubmit={sendEmail}>
           <div class="form-group mb-6">
             <input type="text" class="form-control block
               w-full
@@ -55,7 +71,7 @@ const Contact = () => {
               ease-in-out
               m-0
               focus:text-gray-700 focus:bg-white focus:border-green01 focus:outline-none" id="exampleInput7"
-              placeholder="Name"/>
+              placeholder="Name" name="user_name"/>
           </div>
           <div class="form-group mb-6">
             <input type="email" class="form-control block
@@ -72,7 +88,7 @@ const Contact = () => {
               ease-in-out
               m-0
               focus:text-gray-700 focus:bg-white focus:border-green01 focus:outline-none" id="exampleInput8"
-              placeholder="Email address"/>
+              placeholder="Email address" name="user_email"/>
           </div>
           <div class="form-group mb-6">
             <textarea class="
@@ -91,7 +107,7 @@ const Contact = () => {
               ease-in-out
               m-0
               focus:text-gray-700 focus:bg-white focus:border-green01 focus:outline-none
-            " id="exampleFormControlTextarea13" rows="3" placeholder="Message"></textarea>
+            " id="exampleFormControlTextarea13" rows="3" placeholder="Message" name="message"></textarea>
           </div>
           {/* <div class="form-group form-check text-center mb-6">
             <input type="checkbox"
@@ -104,7 +120,7 @@ const Contact = () => {
             w-full
             px-6
             py-2.5
-            bg-green01
+            bg-greenlight
             text-white
             font-bold
             text-xs
@@ -112,12 +128,12 @@ const Contact = () => {
             uppercase
             rounded
             shadow-md
-            hover:bg-green01 hover:shadow-lg
-            focus:bg-green01 focus:shadow-lg focus:outline-none focus:ring-0
+            hover:bg-greenlight hover:shadow-lg
+            focus:bg-greenlight focus:shadow-lg focus:outline-none focus:ring-0
             active:bg-greenlight active:shadow-lg
             transition
             duration-150
-            ease-in-out">envoyer</button>
+            ease-in-out"  >envoyer</button>
         </form>
       </div>
     </div>

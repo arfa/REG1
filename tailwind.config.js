@@ -1,12 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/**/*.{js,jsx,ts,tsx}",'./node_modules/tw-elements/dist/js/**/*.js'
+    "./src/**/*.{js,jsx,ts,tsx}",'./node_modules/tw-elements/dist/js/**/*.js',
+    
   ],
   theme: {
     fontSize:{
-      xsm: '1.3rem'
+      xsm: '1.3rem',
+      xtl:'1.45rem',
+      xxl: '1.553rem',
+      xxxl: '2rem',
+              
     },
+
     screens: {
       sm: '480px',
       md: '768px',
@@ -19,6 +25,10 @@ module.exports = {
     extend: {
       backgroundImage: {
         'acceuil': "url('images/acceuil.jpg')",
+        'opportunity':"url('images/bgopportunity.jpg')"
+      },
+      height: {
+        '128': '32rem',
       },
       colors: {
         brightRed: 'hsl(12, 88%, 59%)',
@@ -32,11 +42,17 @@ module.exports = {
         greenlight:'#4fa166',
         green01:'#152e1c',
         red01:'#a6030b',
-        red02:'#666'
+        red02:'#666',
+        darkCyan: '#4fa166',
+				lightGrayishCyanBg: 'hsl(180, 52%, 96%)',
+				lightGrayishCyanFilter: 'hsl(180, 31%, 95%)',
+				darkGrayishCyan: 'hsl(180, 8%, 52%)',
+				veryDarkGrayishCyan: 'hsl(180, 14%, 20%)',
       },
     },
   },
   plugins: [
-    require('tw-elements/dist/plugin')
+    require('tw-elements/dist/plugin'),
+    
   ],
 }
