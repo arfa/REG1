@@ -45,7 +45,7 @@ export default function JobListing({ job, handleTagSearch }) {
           dataset={sanityClient.dataset}
         />
                 </div>
-                <div className="text-red-500 mx-4" > NB:Date limite d’envoi des candidatures le 05 mai 2023, à 12h H Tunisie </div>
+                <div className="text-red-500 mx-4 mb-4" > NB:Date limite d’envoi des candidatures le 05 mai 2023, à 12h H Tunisie </div>
               </div>
             </div>
           </div>
