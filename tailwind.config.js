@@ -30,6 +30,9 @@ module.exports = {
       height: {
         '128': '32rem',
       },
+      top:{
+        '128':'7rem',
+      },
       colors: {
         brightRed: 'hsl(12, 88%, 59%)',
         brightRedLight: 'hsl(12, 88%, 69%)',

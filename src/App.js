@@ -9,6 +9,8 @@ import Carousel from './components/Carousel';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Opportunity from './components/Opportunity';
+import AllPosts from "./components/AllPosts";
+import OnePost from "./components/OnePost";
  
 const Home=()=>{
 return(
@@ -21,6 +23,7 @@ return(
        {/* <div className="md:hidden">
        <Services/>
        </div> */}
+       <AllPosts/>
        <Services/>
        <ServiceDetails/>
        <Carousel/>
@@ -52,6 +55,8 @@ function App() {
   <Routes>
   <Route exact path="/" element={<Home/>} />
         <Route path="/opportunity" element={<Opportunity/>} />
+        <Route element={<AllPosts/>} path="/posts" />
+        <Route element={<OnePost/>} path="/posts/:slug" />
   </Routes>
   </Router>
   );
