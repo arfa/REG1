@@ -51,8 +51,8 @@ const Contact = () => {
         </p>
         <p class="text-gray-400 text-xl  mb-2"><span><i class="fa-solid fa-location-dot fa-lg opacity-50"></i></span>  : Ezzahra plage lotissement Afh a
 Ben arous ezzahra</p>
-        <p class="text-gray-400 text-xl mb-2"><span><i class="fa-solid fa-phone fa-lg opacity-50"></i></span>  : +216 55 123 657</p>
-        <p class="text-gray-400 text-xl mb-2"><span><i class="fa-solid fa-envelope fa-lg opacity-50"></i></span>  : contact@reg.net.co </p>
+        <p class="text-gray-400 text-xl mb-2"><span><i class="fa-solid fa-phone fa-lg opacity-50"></i></span>  : +216 55 123 657 / +216 51 440 2222</p>
+        <p class="text-gray-400 text-xl mb-2"><span><i class="fa-solid fa-envelope fa-lg opacity-50"></i></span>  : respectenvironnementg@gmail.com </p>
       </div>
       <div class="grow-0 shrink-0 basis-auto mb-12 md:mb-0 w-full md:w-6/12 px-3 lg:px-6">
         <form  onSubmit={sendEmail}>

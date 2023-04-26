@@ -24,7 +24,7 @@ module.exports = {
     },
     extend: {
       backgroundImage: {
-        'acceuil': "url('images/acceuil.jpg')",
+        'acceuil': "url('images/acceuil.png')",
         'opportunity':"url('images/bgopportunity.jpg')"
       },
       height: {
@@ -56,6 +56,7 @@ module.exports = {
   },
   plugins: [
     require('tw-elements/dist/plugin'),
+    require('@tailwindcss/line-clamp'),
     
   ],
 }

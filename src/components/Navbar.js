@@ -132,40 +132,31 @@ function Navbar() {
           {(ref) => (
             <div className="md:hidden    " id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3  space-y-1 sm:px-3 ">
-                <a
-                  href="#"
-                  className=" text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-semibold justify-self-center"
-                >
-                   <Link activeClass="active" className="test1" to="APROPOS" spy={true} smooth={true} duration={1000} >ACCEUIL</Link>
-                </a>
+                
+                   <Link                   className="  text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-semibold justify-self-center"
+ activeClass="active" to="APROPOS" spy={true} smooth={true} duration={1000} >ACCEUIL</Link>
+               
 
-                <a
-                  href="#"
-                  className="text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-semibold"
-                >
-                  <Link activeClass="active" className="test1" to="SERVICES" spy={true} smooth={true} duration={1000} >SERVICES</Link>
-                </a>
+                
+                  <Link                   className="text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-semibold"
+ activeClass="active"  to="SERVICES" spy={true} smooth={true} duration={1000} >SERVICES</Link>
+                
 
-                <a
-                  href="#"
-                  className="text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-semibold"
-                >
-                  <Link activeClass="active" className="test1" to="PROJETS" spy={true} smooth={true} duration={1000} >PROJETS</Link>
-                </a>
+                
+                  <Link                   className="text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-semibold"
+ activeClass="active" to="PROJETS" spy={true} smooth={true} duration={1000} >PROJETS</Link>
+                
 
-                {/* <a
-                  href="#"
-                  className="text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-semibold"
-                >
-                  REFERENCE
-                </a> */}
+               
 
-                <a
-                  href="#"
-                  className="text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-semibold"
-                >
-                 <Link activeClass="active" className="test1" to="CONTACT" spy={true} smooth={true} duration={1000} >CONTACT</Link>
-                </a>
+               
+                 <Link                  className =" text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-semibold"
+ activeClass="active"  to="CONTACT" spy={true} smooth={true} duration={1000} >CONTACT</Link>
+                
+                
+                    <Link1                     className="text-greenlight hover:bg-greenlight flex justify-center  font-bold hover:text-white px-3 py-2 rounded-sm text-base font-semibold border-2 uppercase border-greenlight "
+ activeClass="active"  to="/opportunity"  >opportunités</Link1>
+                  
               </div>
             </div>
           )}
