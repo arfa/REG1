@@ -46,7 +46,7 @@ function urlFor(source) {
       <div className="grid grid-row-1    lg:grid-cols-3 gap-8 mx-8 lg:mx-16 mt-8">
         {allPostsData &&
           allPostsData.map((post, index) => (
-            <div className="border relative border-gray hover:scale-105  rounded-md shadow-lg shadow-gray  ">
+            <div className="border relative border-gray-300/25 transition duration-300 ease-in-out hover:scale-105 shadow-lg  rounded-md hover:shadow-lg shadow-gray-300 ">
                  <Link to={"/posts/" + post.slug.current} key={post.slug.current} >
               <div className="  space-y-4 " key={index}>
                 <div className=""><img src={post.mainImage.asset.url} alt="" className="w-full h-96   rounded-t-md "/></div>

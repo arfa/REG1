@@ -2,24 +2,24 @@ import {defineField, defineType} from 'sanity'
 
 export default defineType({
   name: 'offre',
-  title: 'offre',
+  title: 'Offre',
   type: 'document',
   fields: [
     defineField({
       name: 'role',
-      title: 'Role',
+      title: 'Title',
       type: 'string',
     }),
    
-    defineField({
-      name: 'author',
-      title: 'Author',
-      type: 'reference',
-      to: {type: 'author'},
-    }),
+    // defineField({
+    //   name: 'author',
+    //   title: 'Author',
+    //   type: 'reference',
+    //   to: {type: 'author'},
+    // }),
     defineField({
         name: 'level',
-      title: 'Level',
+      title: 'Job position',
       type: 'string',
     }),
 
@@ -33,7 +33,7 @@ export default defineType({
     }),
     
     defineField({
-        title: 'pdffile',
+        title: 'PDF File',
         name: 'pdffile',
         type: 'file',
         
@@ -52,13 +52,13 @@ export default defineType({
 
   preview: {
     select: {
-      title: 'title',
+      title: 'role',
       author: 'author.name',
       media: 'mainImage',
     },
-    prepare(selection) {
-      const {author} = selection
-      return {...selection, subtitle: author && `by ${author}`}
-    },
+    // prepare(selection) {
+    //   const {author} = selection
+    //   return {...selection, subtitle: author && `by ${author}`}
+    // },
   },
 })

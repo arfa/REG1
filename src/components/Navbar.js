@@ -28,26 +28,17 @@ function Navbar() {
            
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-6">
-                  <a
-                    href="#"
-                    className=" text-gray-300 hover:bg-greenlight font-bold hover:text-white px-3 py-2 rounded-md text-base font-semibold"
-                  >
-                    <Link activeClass="active" className="test1" to="APROPOS" spy={true} smooth={true} duration={1000} >A PROPOS</Link>
-                  </a>
-                  
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-greenlight font-bold hover:text-white px-3 py-2 rounded-md text-base font-semibold"
-                  >
-                    <Link activeClass="active" className="test1" to="SERVICES" spy={true} smooth={true} duration={1000} >SERVICES</Link>
-                  </a>
+                                    <Link                    className=" text-gray-300 hover:bg-greenlight font-bold hover:text-white  rounded-md text-base font-semibold"
+ activeClass="active"  to="APROPOS" spy={true} smooth={true} duration={1000} ><button className="px-3 py-2">A PROPOS</button></Link>
 
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-greenlight font-bold hover:text-white px-3 py-2 rounded-md text-base font-semibold"
-                  >
-                    <Link activeClass="active" className="test1" to="PROJETS" spy={true} smooth={true} duration={1000} >PROJETS</Link>
-                  </a>
+                  
+                                     <Link                    className="text-gray-300 hover:bg-greenlight font-bold hover:text-white rounded-md text-base font-semibold"
+ activeClass="active"  to="SERVICES" spy={true} smooth={true} duration={1000} ><button className="px-3 py-2">SERVICES</button></Link>
+
+
+                                      <Link                    className="text-gray-300 hover:bg-greenlight font-bold hover:text-white  rounded-md text-base font-semibold"
+ activeClass="active"  to="PROJETS" spy={true} smooth={true} duration={1000} ><button className="px-3 py-2">PROJETS</button></Link>
+
 
                   {/* <a
                     href="#"
@@ -56,18 +47,11 @@ function Navbar() {
                     <Link activeClass="active" className="test1" to="REFERENCE" spy={true} smooth={true} duration={1000} >REFERENCE</Link>
                   </a> */}
 
-                  <a
-                    href="#"
-                    className="text-gray-300 hover:bg-greenlight font-bold hover:text-white px-3 py-2 rounded-md text-base font-semibold"
-                  >
-                    <Link activeClass="active" className="test1" to="CONTACT" spy={true} smooth={true} duration={1000} >CONTACT</Link>
-                  </a>
-                  <a
-                    href="#"
-                    className="text-greenlight hover:bg-greenlight font-bold hover:text-white px-3 py-2 rounded-sm text-base font-semibold border-2 uppercase border-greenlight "
-                  >
-                    <Link1 activeClass="active"  to="/opportunity"  >opportunités</Link1>
-                  </a>
+                                    <Link                    className="text-gray-300 hover:bg-greenlight font-bold hover:text-white  rounded-md text-base font-semibold"
+ activeClass="active"  to="CONTACT" spy={true} smooth={true} duration={1000} ><button className="px-3 py-2">CONTACT</button></Link>
+
+                 <Link1                    className="text-greenlight hover:bg-greenlight font-bold hover:text-white px-3 py-2 rounded-sm text-base font-semibold border-2 uppercase border-greenlight "
+ activeClass="active"  to="/opportunity"  >opportunités</Link1>
                 </div>
                 
               </div>

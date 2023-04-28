@@ -61,7 +61,7 @@ export default function Opportunity() {
 	return (
 		<> 
 		<div className='sticky -top-28  z-10'>
-		<Header />
+		<Header text={'Rejoignez nous'} />
 			<div className='my-16 max-w-screen-lg mx-auto'>
 			<JobFilters
 						filters={filters}

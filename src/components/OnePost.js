@@ -37,14 +37,21 @@ export default function OnePost() {
       .catch(console.error);
   }, [slug]);
 
-  if (!postData) return <div>Loading...</div>;
+  if (!postData) return <div
+  class="inline-block flex items-center  m-auto h-8 w-8 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] text-success motion-reduce:animate-[spin_1.5s_linear_infinite]"
+  role="status">
+  <span
+    class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+    >Loading...</span
+    >
+</div>;
 
   return (
     <>
-    <Header/>
-    <div className=" mx-auto">
+    <Header text={'Actualités'}/>
+    <div className="container mx-auto">
       <div>
-        <h2 className="flex justify-center">{postData.title}</h2>
+        <h2 className="flex text-xtl md:text-xxl font-bold text-center justify-center">"{postData.title}"</h2>
         {/* <div>
           
           <img
@@ -54,27 +61,29 @@ export default function OnePost() {
           <h4>{postData.name}</h4>
         </div> */}
       </div>
-      <div className="md:hidden">
+     
+      <div className="grid grid-row-1 grid-reverse md:grid-cols-2 gap-4 justify-items-center h-1/2 p-8 ">
+      <div className=" font-semibold   lg:text-xsm  text-lg text-gray-600 opacity-75 ">
         <BlockContent
+        className=""
           blocks={postData.body}
           projectId={sanityClient.projectId}
           dataset={sanityClient.dataset}
         />
       </div>
-      <div className="grid grid-row-1 grid-reverse md:grid-cols-2 gap-4 justify-items-center h-1/2 p-8 ">
       {postData.blogImages.map((blogImage,index)=>(<div className={index === 0 ? '  ' : ''} key={index}>
         
         <img className="max-w-full h-auto  shadow-lg shadow-gray-400 rounded-sm m-auto" src={urlFor(blogImage).url()} alt="" />
        
         
       </div>))}
-      <div className="hidden md:block">
+      {/* <div className="hidden md:block">
         <BlockContent
           blocks={postData.body}
           projectId={sanityClient.projectId}
           dataset={sanityClient.dataset}
         />
-      </div>
+      </div> */}
       </div>
       
       {/* <img src={urlFor(postData.mainImage).width(200).url()} alt="" /> */}

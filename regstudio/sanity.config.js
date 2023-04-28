@@ -5,7 +5,7 @@ import {schemaTypes} from './schemas'
 
 export default defineConfig({
   name: 'default',
-  title: 'regstudio',
+  title: 'Reg-Admin',
 
   projectId: 'as4oug0f',
   dataset: 'production',
