@@ -17,7 +17,7 @@ function Navbar() {
                   className="w-20 h-16  "
                   src={Logo}
                   alt="Workflow"
-                /></Link1>
+                /></Link1> 
                 
               </div>
               

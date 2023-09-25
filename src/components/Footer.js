@@ -10,7 +10,7 @@ const Footer = () => {
           <button className="" >
           <Link activeClass="active" className="test1" to="APROPOS" spy={true} smooth={true} duration={1000} ><i class="fas fa-angle-double-up fa-xl" style={{color:"white"}}></i></Link>
           
-          </button>
+          </button> 
         </div>
         
         <div class="flex justify-center mt-8 space-x-6">
