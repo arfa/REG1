@@ -4,6 +4,25 @@ import sanityClient from '../client.js'
 export default function JobListing({ job, handleTagSearch }) {
 	let tags = [job.publishedAt, job.level];
 	const [showModal, setShowModal] = React.useState(false);
+	const serializers = {
+		types: {
+		  block: props => {
+			const { style = 'normal' } = props.node;
+			const { children } = props;
+	  
+			switch (style) {
+			  case 'redText':
+				return <span style={{ color: 'red' }}>{children}</span>;
+	  
+			  case 'blueText':
+				return <span style={{ color: 'blue' }}>{children}</span>;
+	  
+			  default:
+				return <p>{children}</p>;
+			}
+		  },
+		},
+	  };
 	const Modal=(props)=>{
 	return(<>
 	<div
@@ -43,14 +62,15 @@ export default function JobListing({ job, handleTagSearch }) {
           blocks={props.body}
           projectId={sanityClient.projectId}
           dataset={sanityClient.dataset}
+		  serializers={serializers}
         />
                 </div>
-                <div className="text-red-500 mx-4 mb-4" > NB:Date limite d’envoi des candidatures le 05 mai 2023, à 12h H Tunisie </div>
+                {/* <div className="text-red-500 mx-4 mb-4" > NB:Date limite d’envoi des candidatures le 05 mai 2023, à 12h H Tunisie </div> */}
               </div>
             </div>
           </div>
 		  
-          <div className="text-red fixed inset-0 ">Date limite d’envoi des candidatures le 05 mai 2023, à 12h H Tunisie </div>
+          {/* <div className="text-red fixed inset-0 ">Date limite d’envoi des candidatures le 05 mai 2023, à 12h H Tunisie </div> */}
 	</>)	
 	}
 	return (

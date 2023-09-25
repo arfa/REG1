@@ -40,9 +40,13 @@ const ServiceDetails = () => {
               {/* <h3 class="hidden mb-4 text-lg text-greenlight font-bold md:block">
               Vente de produits de carrière
               </h3> */}
-              <p class="text-white lg:text-xtl my-4">
-              Tout type de démolition : usine, immeuble, hôtel et autres du secteur des BTP
-avec une technique avantageuse au niveau  temps, qualité, environnement et pollution en utilisant une pince spéciale 
+              <p class="text-white lg:text-xsm my-4">
+              Une approche avantageuse pour le secteur des BTP.
+C’est un processus incontournable dans le secteur des BTP (Bâtiments et Travaux
+Publics) qui englobe une variété de structures telles que des usines, des
+immeubles, des hôtels, et bien d'autres. Pour garantir une démolition efficace et
+respectueuse de l'environnement, il est essentiel d'adopter une technique
+appropriée.
 
               </p>
             </div>
@@ -96,8 +100,12 @@ avec une technique avantageuse au niveau  temps, qualité, environnement et poll
               {/* <h3 class="hidden mb-4 text-lg text-greenlight font-bold md:block">
               Vente de produits de carrière
               </h3> */}
-              <p class="text-white my-4 lg:text-xtl">
-              Décharge agréée pour tous types de déchets de construction 
+              <p class="text-white my-4 lg:text-xsm">
+              Agréée pour la gestion de tous types de déchets de construction.
+Les Décharges de Déchets jouent un rôle essentiel dans la gestion responsable des déchets
+de construction.
+En tant qu'espace désigné et agréé, elles permettent d'éliminer correctement et efficacement
+les déchets générés par les projets de construction.
 
               </p>
             </div>
@@ -149,8 +157,10 @@ avec une technique avantageuse au niveau  temps, qualité, environnement et poll
               {/* <h3 class="hidden mb-4 text-lg text-greenlight font-bold md:block">
               Vente de produits de carrière
               </h3> */}
-              <p class="text-white my-4 lg:text-xtl">
-              Vente de produits de carrière dérivés de déchets de construction au sein de l’économie circulaire
+              <p class="text-white my-4 lg:text-xsm">
+              Vente de Produits de Carrière pour une Économie Circulaire Prospère.
+La vente de produits de carrière dérivés de déchets de construction est une initiative
+innovante au cœur de l'économie circulaire.
               </p>
             </div>
       

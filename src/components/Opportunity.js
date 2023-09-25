@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet-async";
 import JobFilters from './JobFilters.js';
 import JobListing from './JobListing.js';
 import Header from './Header';
@@ -55,11 +56,15 @@ export default function Opportunity() {
 	const handleClearFilters = () => {
 		setFilters([]);
 	};
-
-	const filteredJob = jobs.filter((job) => filterTags(job));
+	const jobss =[...jobs].sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+	const filteredJob = jobss.filter((job) => filterTags(job));
 
 	return (
 		<> 
+		<Helmet>
+		<title>Opportunités de recyclage des déchets de bâtiment en Tunisie</title>
+    <meta name='description' content='Explorez les opportunités de recyclage des déchets de bâtiment en Tunisie avec Respect Environment Group. Ensemble, pour une construction durable.' />
+		</Helmet>
 		<div className='sticky -top-28  z-10'>
 		<Header text={'Rejoignez nous'} />
 			<div className='my-16 max-w-screen-lg mx-auto'>

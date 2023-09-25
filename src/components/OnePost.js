@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 import sanityClient from "../client.js";
 import BlockContent from "@sanity/block-content-to-react";
 import imageUrlBuilder from "@sanity/image-url";
@@ -48,6 +49,10 @@ export default function OnePost() {
 
   return (
     <>
+    <Helmet>
+		<title>{postData.title}</title>
+    <meta name='description' content={postData.title} />
+		</Helmet>
     <Header text={'Actualités'}/>
     <div className="container mx-auto">
       <div>
@@ -63,7 +68,7 @@ export default function OnePost() {
       </div>
      
       <div className="grid grid-row-1 grid-reverse md:grid-cols-2 gap-4 justify-items-center h-1/2 p-8 ">
-      <div className=" font-semibold   lg:text-xsm  text-lg text-gray-600 opacity-75 ">
+      <div className=" font-semibold   lg:text-xsm  text-lg text-black opacity-75 ">
         <BlockContent
         className=""
           blocks={postData.body}

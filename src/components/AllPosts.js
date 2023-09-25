@@ -35,6 +35,7 @@ function urlFor(source) {
       .then((data) => setAllPosts(data))
       .catch(console.error);
   }, []);
+  const postss=allPostsData?allPostsData.slice(-3):[];
 
   return (
     <section className="my-12">
@@ -44,8 +45,8 @@ function urlFor(source) {
         </div>
       
       <div className="grid grid-row-1    lg:grid-cols-3 gap-8 mx-8 lg:mx-16 mt-8">
-        {allPostsData &&
-          allPostsData.map((post, index) => (
+        {postss &&
+          postss.map((post, index) => (
             <div className="border relative border-gray-300/25 transition duration-300 ease-in-out hover:scale-105 shadow-lg  rounded-md hover:shadow-lg shadow-gray-300 ">
                  <Link to={"/posts/" + post.slug.current} key={post.slug.current} >
               <div className="  space-y-4 " key={index}>

@@ -13,11 +13,12 @@ function Navbar() {
       <nav className="   md:flex  grid grid-cols-2  md:flex-row  items-center justify-between   bg-white">
 
       <div className=" flex  ml-4  ">
-                <img
+        <Link1 to='/'><img
                   className="w-20 h-16  "
                   src={Logo}
                   alt="Workflow"
-                />
+                /></Link1>
+                
               </div>
               
         <div className="max-w-7xl flex justify-end md:mx-auto  px-4 sm:px-6  lg:px-8">
@@ -28,16 +29,16 @@ function Navbar() {
            
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-6">
-                                    <Link                    className=" text-gray-300 hover:bg-greenlight font-bold hover:text-white  rounded-md text-base font-semibold"
- activeClass="active"  to="APROPOS" spy={true} smooth={true} duration={1000} ><button className="px-3 py-2">A PROPOS</button></Link>
+                                    <Link1                    className=" text-gray-300 hover:bg-greenlight font-bold hover:text-white  rounded-md text-base font-semibold"
+ activeClass="active"  to="/" spy={true} smooth={true} duration={1000} ><button className="px-3 py-2">Acceuil</button></Link1>
 
                   
-                                     <Link                    className="text-gray-300 hover:bg-greenlight font-bold hover:text-white rounded-md text-base font-semibold"
- activeClass="active"  to="SERVICES" spy={true} smooth={true} duration={1000} ><button className="px-3 py-2">SERVICES</button></Link>
+                                     <Link1                    className="text-gray-300 hover:bg-greenlight font-bold hover:text-white rounded-md text-base font-semibold"
+ activeClass="active"  to="/service" spy={true} smooth={true} duration={1000} ><button className="px-3 py-2">SERVICES</button></Link1>
 
 
-                                      <Link                    className="text-gray-300 hover:bg-greenlight font-bold hover:text-white  rounded-md text-base font-semibold"
- activeClass="active"  to="PROJETS" spy={true} smooth={true} duration={1000} ><button className="px-3 py-2">PROJETS</button></Link>
+                                      <Link1                    className="text-gray-300 hover:bg-greenlight font-bold hover:text-white  rounded-md text-base font-semibold"
+ activeClass="active"  to="/projets" spy={true} smooth={true} duration={1000} ><button className="px-3 py-2">PROJETS</button></Link1>
 
 
                   {/* <a
@@ -46,9 +47,11 @@ function Navbar() {
                   >
                     <Link activeClass="active" className="test1" to="REFERENCE" spy={true} smooth={true} duration={1000} >REFERENCE</Link>
                   </a> */}
+                  <Link1                    className="text-gray-300 hover:bg-greenlight font-bold hover:text-white  rounded-md text-base font-semibold"
+ activeClass="active"  to="/posts" spy={true} smooth={true} duration={1000} ><button className="px-3 py-2 uppercase ">Actualités</button></Link1>
 
-                                    <Link                    className="text-gray-300 hover:bg-greenlight font-bold hover:text-white  rounded-md text-base font-semibold"
- activeClass="active"  to="CONTACT" spy={true} smooth={true} duration={1000} ><button className="px-3 py-2">CONTACT</button></Link>
+                                    <Link1                    className="text-gray-300 hover:bg-greenlight font-bold hover:text-white  rounded-md text-base font-semibold"
+ activeClass="active"  to="/contact" spy={true} smooth={true} duration={1000} ><button className="px-3 py-2">CONTACT</button></Link1>
 
                  <Link1                    className="text-greenlight hover:bg-greenlight font-bold hover:text-white px-3 py-2 rounded-sm text-base font-semibold border-2 uppercase border-greenlight "
  activeClass="active"  to="/opportunity"  >opportunités</Link1>
@@ -117,25 +120,26 @@ function Navbar() {
             <div className="md:hidden    " id="mobile-menu">
               <div ref={ref} className="px-2 pt-2 pb-3  space-y-1 sm:px-3 ">
                 
-                   <Link                   className="  text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-semibold justify-self-center"
- activeClass="active" to="APROPOS" spy={true} smooth={true} duration={1000} >ACCEUIL</Link>
+                   <Link1                   className="  text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-semibold justify-self-center"
+ activeClass="active" to="/" spy={true} smooth={true} duration={1000} >ACCEUIL</Link1>
                
 
                 
-                  <Link                   className="text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-semibold"
- activeClass="active"  to="SERVICES" spy={true} smooth={true} duration={1000} >SERVICES</Link>
+                  <Link1                   className="text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-semibold"
+ activeClass="active"  to="/service" spy={true} smooth={true} duration={1000} >SERVICES</Link1>
                 
 
                 
-                  <Link                   className="text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-semibold"
- activeClass="active" to="PROJETS" spy={true} smooth={true} duration={1000} >PROJETS</Link>
+                  <Link1                   className="text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-semibold"
+ activeClass="active" to="/projets" spy={true} smooth={true} duration={1000} >PROJETS</Link1>
                 
-
+                <Link1                   className="text-gray-300  hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-semibold"
+ activeClass="active" to="posts" spy={true} smooth={true} duration={1000} ><span className="uppercase">Actualités</span> </Link1>
                
 
                
-                 <Link                  className =" text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-semibold"
- activeClass="active"  to="CONTACT" spy={true} smooth={true} duration={1000} >CONTACT</Link>
+                 <Link1                  className =" text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-semibold"
+ activeClass="active"  to="/contact" spy={true} smooth={true} duration={1000} >CONTACT</Link1>
                 
                 
                     <Link1                     className="text-greenlight hover:bg-greenlight flex justify-center  font-bold hover:text-white px-3 py-2 rounded-sm text-base font-semibold border-2 uppercase border-greenlight "

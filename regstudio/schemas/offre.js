@@ -37,6 +37,7 @@ export default defineType({
         name: 'pdffile',
         type: 'file',
         
+        
       }),
     defineField({
       name: 'publishedAt',

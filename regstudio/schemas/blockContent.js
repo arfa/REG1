@@ -31,6 +31,7 @@ export default defineType({
         {title: 'H3', value: 'h3'},
         {title: 'H4', value: 'h4'},
         {title: 'Quote', value: 'blockquote'},
+        { title: 'Red Text', value: 'redText' },
       ],
       lists: [{title: 'Bullet', value: 'bullet'}],
       // Marks let you mark up inline text in the block editor.
@@ -44,12 +45,16 @@ export default defineType({
         ],
         // Annotations can be any object structure – e.g. a link or a footnote.
         annotations: [
+          {name: 'color', title: 'Color', type: 'color',options: {
+            disableAlpha: true
+          }},
           {
             title: 'URL',
             name: 'link',
             type: 'object',
             icon:LinkIcon,
             fields: [
+              
               {
                 title: 'URL',
                 name: 'href',
