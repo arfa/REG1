@@ -5,6 +5,7 @@ import Footer from './Footer'
 import ServiceDetails from './ServiceDetails'
 import Contact from './Contact'
 import Carousel from './Carousel'
+import Certifications from './Certifications'
 
 const ServicePage = ({pageName}) => {
   return (
@@ -14,6 +15,8 @@ const ServicePage = ({pageName}) => {
     {(pageName==='Contact')?(<Contact/>):(<></>)}
     {(pageName==='ServiceDetails')?(<ServiceDetails/>):(<></>)}
     {(pageName==='Projets')?(<Carousel/>):(<></>)}
+    {(pageName==='Certifications')?(<Certifications/>):(<></>)}
+
     <Footer/>
     </div>
    

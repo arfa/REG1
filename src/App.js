@@ -14,6 +14,7 @@ import AllPosts from "./components/AllPosts";
 import Posts from "./components/Posts";
 import OnePost from "./components/OnePost";
 import ServicePage from "./components/ServicePage";
+import Certifications from "./components/Certifications";
  
 const Home=()=>{
 return(
@@ -68,6 +69,8 @@ function App() {
         <Route element={<ServicePage pageName={'Contact'}/>} path="/contact" />
         <Route element={<ServicePage pageName={'Projets'}/>} path="/projets" />
         <Route element={<ServicePage pageName={'ServiceDetails'}/>} path="/service" />
+        <Route element={<ServicePage pageName={'Certifications'}/>} path="/certification" />
+
 
 
   </Routes>

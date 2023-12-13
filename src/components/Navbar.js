@@ -30,7 +30,7 @@ function Navbar() {
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-6">
                                     <Link1                    className=" text-gray-300 hover:bg-greenlight font-bold hover:text-white  rounded-md text-base font-semibold"
- activeClass="active"  to="/" spy={true} smooth={true} duration={1000} ><button className="px-3 py-2">Acceuil</button></Link1>
+ activeClass="active"  to="/" spy={true} smooth={true} duration={1000} ><button className="px-3 py-2">ACCEUIL</button></Link1>
 
                   
                                      <Link1                    className="text-gray-300 hover:bg-greenlight font-bold hover:text-white rounded-md text-base font-semibold"
@@ -52,6 +52,8 @@ function Navbar() {
 
                                     <Link1                    className="text-gray-300 hover:bg-greenlight font-bold hover:text-white  rounded-md text-base font-semibold"
  activeClass="active"  to="/contact" spy={true} smooth={true} duration={1000} ><button className="px-3 py-2">CONTACT</button></Link1>
+  <Link1                    className="text-gray-300 hover:bg-greenlight font-bold hover:text-white  rounded-md text-base font-semibold"
+ activeClass="active"  to="/certification" spy={true} smooth={true} duration={1000} ><button className="px-3 py-2">CERTIFICATIONS</button></Link1>
 
                  <Link1                    className="text-greenlight hover:bg-greenlight font-bold hover:text-white px-3 py-2 rounded-sm text-base font-semibold border-2 uppercase border-greenlight "
  activeClass="active"  to="/opportunity"  >opportunités</Link1>
@@ -140,6 +142,8 @@ function Navbar() {
                
                  <Link1                  className =" text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-semibold"
  activeClass="active"  to="/contact" spy={true} smooth={true} duration={1000} >CONTACT</Link1>
+ <Link1                  className =" text-gray-300 hover:bg-greenlight text-center hover:text-white block px-3 py-2 rounded-md text-base font-semibold"
+ activeClass="active"  to="/certification" spy={true} smooth={true} duration={1000} >CERTIFICAIONS</Link1>
                 
                 
                     <Link1                     className="text-greenlight hover:bg-greenlight flex justify-center  font-bold hover:text-white px-3 py-2 rounded-sm text-base font-semibold border-2 uppercase border-greenlight "
