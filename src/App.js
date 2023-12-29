@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes,Route, Link } from 'react-router-dom';
 import {Helmet, HelmetProvider } from 'react-helmet-async';
 import Navbar from './components/Navbar';
 import Acceuil from './components/Acceuil';
+import Acceuil1 from './components/Acceuil1';
 import Services from './components/Services';
 import ServiceDetails from './components/ServiceDetails';
 import Carousel from './components/Carousel';
@@ -27,7 +28,7 @@ return(
     
     </div>
    
-        <Acceuil/>
+        <Acceuil1/>
        {/* <div className="md:hidden">
        <Services/>
        </div> */}

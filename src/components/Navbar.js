@@ -28,7 +28,7 @@ function Navbar() {
             <div className="flex items-center  ">
            
               <div className="hidden md:block">
-                <div className="ml-10 flex items-baseline space-x-6">
+                <div className="ml-10 flex items-baseline space-x-2">
                                     <Link1                    className=" text-gray-300 hover:bg-greenlight font-bold hover:text-white  rounded-md text-base font-semibold"
  activeClass="active"  to="/" spy={true} smooth={true} duration={1000} ><button className="px-3 py-2">ACCEUIL</button></Link1>
 
